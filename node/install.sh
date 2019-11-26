@@ -1,7 +1,7 @@
-if test ! $(which spoof)
+if [ ! -d "$HOME/.nvm" ];
 then
-  if test $(which npm)
-  then
-    sudo npm install spoof -g
-  fi
+  echo "Installing nvm"
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | zsh
+else
+  echo "nvm already installed"
 fi

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ ! -d $2 ]
+then
+    echo "Installing $1"
+    git clone --quiet $1 $2 > /dev/null
+    echo "Done installing $1"
+else
+    echo "Updating $1"
+    cd $2
+    git pull --quiet $1 > /dev/null
+    echo "Done updating $1"
+fi
