@@ -1,0 +1,1 @@
+export XDG_DATA_DIRS=$XDG_DATA_HOME/applications:$XDG_DATA_DIRS
