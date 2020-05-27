@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IntelliJ IDEA Ultimate Edition (ZSH Enabled)
+Icon=/opt/intellij-idea-ultimate-edition/bin/idea.png
+Exec=/usr/bin/zsh -i -c "/usr/bin/intellij-idea-ultimate-edition %f"
+Comment=Capable and Ergonomic IDE for JVM
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-idea
