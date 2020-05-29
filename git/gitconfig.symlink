@@ -16,7 +16,6 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = vim
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -32,7 +31,7 @@
         # Setting to git 2.0 default to suppress warning message
         default = simple
 [credential]
-	helper = osxkeychain
+	helper = credentials-cache
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
