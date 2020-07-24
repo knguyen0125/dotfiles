@@ -20,6 +20,7 @@ plugins=(
     zsh-autosuggestions
     conda-zsh-completion
     autoenv
+    aws
 )
 
 source $ZSH/oh-my-zsh.sh
