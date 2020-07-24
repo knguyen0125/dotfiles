@@ -19,6 +19,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     conda-zsh-completion
+    autoenv
 )
 
 source $ZSH/oh-my-zsh.sh
