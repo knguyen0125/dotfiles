@@ -7,6 +7,7 @@
 
 set -e
 
+git="$(which git)"
 parentDirectory="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -P)"
 dotfilesDirectory="$(cd "$( dirname "$parentDirectory" )" && pwd -P)"
 
@@ -17,6 +18,7 @@ displayUsageAndExit() {
 	echo ""
 	echo "Options:"
 	echo "  -e, --edit    Open dotfiles directory for editing"
+	echo "  -u, --update  Update repository"
 	echo "  -h, --help    Show this help message and exit"
 	exit
 }
@@ -28,6 +30,10 @@ while test $# -gt 0; do
 			;;
 		"-e"|"--edit")
 			exec "$EDITOR" "$dotfilesDirectory"
+			exit
+			;;
+		"-u"|"--update")
+			exec "$git" "-C" "$dotfilesDirectory" "pull"
 			exit
 			;;
 		*)
@@ -43,3 +49,4 @@ export ZSHDOT=$HOME/.dotfiles
 # Install software
 echo "› $ZSHDOT/script/install"
 $ZSHDOT/script/install
+
